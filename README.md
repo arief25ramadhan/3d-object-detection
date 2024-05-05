@@ -1,9 +1,11 @@
-# 3d-object-detection
+# 3D Object Detection using MMDetection3D
 
 ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
 ![PyTorch](https://img.shields.io/badge/PyTorch-%23EE4C2C.svg?style=for-the-badge&logo=PyTorch&logoColor=white)
 
 ## 1. Introduction
+
+In this repository, we will use the mmdetection3d to perform 3D object detection.
 
 ## 2. Installation
 
@@ -45,6 +47,28 @@ To use this repository, we need to set up our environment with its required libr
    # "-e" means installing a project in edtiable mode,
    # thus any local modifications made to the code will take effect without reinstallation.
    ```
+
 ## 3. Usage
+
+1. Download test dataset
+
+```
+    mim download mmdet3d --config pointpillars_hv_secfpn_8xb6-160e_kitti-3d-car --dest .
+```
+
+2. Visualize dataset
+
+```
+    python demo/pcd_demo.py demo/data/kitti/000008.bin pointpillars_hv_secfpn_8xb6-160e_kitti-3d-car.py hv_pointpillars_secfpn_6x8_160e_kitti-3d-car_20220331_134606-d42d15ed.pth --show
+
+```
+
+The command will open a pop-up window displaying the visualization of 3D object detection of point clouds as shown in figure below.
+
+<p align="center">
+  <img src="assets/test.png" width="600" title="Test 3D Object Detection">
+</p>
+
+
 
 ## References
