@@ -50,7 +50,7 @@ To use this repository, we need to set up our environment with its required libr
 
 ## 3. Usage
 
-1. Download test dataset
+1. Download model
 
 ```
     mim download mmdet3d --config pointpillars_hv_secfpn_8xb6-160e_kitti-3d-car --dest .
