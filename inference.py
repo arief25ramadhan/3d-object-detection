@@ -1,4 +1,5 @@
 import sys
+import cv2
 sys.path.append('mmdetecion3d/')
 
 from mmdet3d.apis import MonoDet3DInferencer
@@ -10,8 +11,12 @@ checkpoint_file = 'mmdetection3d/pgd_r101_caffe_fpn_gn-head_3x4_4x_kitti-mono3d_
 # result = inference_mono_3d_detector(model, 'mmdetection3d/demo/data/kitti/000008.png', 'mmdetection3d/demo/data/kitti/000008.pkl', cam_type='CAM2', show=True)
 # print(result)
 
-
 inferencer = MonoDet3DInferencer(config_file, checkpoint_file)
 inputs = dict(img='mmdetection3d/demo/data/kitti/000008.png', infos='mmdetection3d/demo/data/kitti/000008.pkl')
-inferencer(inputs, show=False, out_dir='./remote_outputs')
 
+results = inferencer(inputs, show=False, out_dir='./remote_outputs')
+
+print(results['visualization'][0])
+
+for key in results:
+    print(key)

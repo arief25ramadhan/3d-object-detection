@@ -14,7 +14,7 @@ To use this repository, we need to set up our environment with its required libr
 1. Create new python virtual environment
     ```
     # Create a new virtual env named 3d_env
-    python -m 
+    python -m venv 3d_env
     
     # Go inside the virtual environment
     source 3d_env/bin/activate
