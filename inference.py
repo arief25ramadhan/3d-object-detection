@@ -51,9 +51,9 @@ img = mmcv.imread('mmdetection3d/demo/data/kitti/000008.png')
 img = mmcv.imconvert(img, 'bgr', 'rgb')
 visualizer.set_image(img)
 # project 3D bboxes to image
-img_out = visualizer.draw_proj_bboxes_3d(gt_bboxes_3d, input_meta)
+visualizer.draw_proj_bboxes_3d(gt_bboxes_3d, input_meta)
 
-cv2.imwrite('test.jpg', img_out)
+cv2.imwrite('test.jpg', img)
 
 # print(img_out)
 
